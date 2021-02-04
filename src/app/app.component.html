@@ -1,0 +1,10 @@
+<hello name="{{ name }}"></hello>
+
+
+<!-- 
+<input type='text' #refVal [(ngModel)]="myVal" [ngClass]="getColor(refVal.value)" > -->
+<input type='text' #refVal [(ngModel)]="myVal" [style.color]="getColor(refVal.value)" >
+<!-- <input type='text' #refVal1 [(ngModel)]="myVal" [style.color]="refVal1.value < 5000? refVal1.value < 3000? 'green':' red': ' yellow'"> -->
+<p>
+	{{refVal.value}}
+</p>
