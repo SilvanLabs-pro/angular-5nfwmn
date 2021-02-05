@@ -13,22 +13,27 @@ export class AppComponent {
 
   @ViewChild("refVal", { static: true }) input: ElementRef;
   ngAfterviewInit() {
-    console.log(this.input.nativeElement.value);
+    // console.log(this.input.nativeElement.value);
   }
 
   // if(this.input > 5000){
   //   this.element.
   // }
+  getStyle(val) {
+    console.log(val);
+    let color = val < 5000 ? (val < 3000 ? "green" : "yellow") : "red";
+    return "color:" + color;
+  }
 
   getColor(val) {
     console.log(this.input.nativeElement.value);
     if (val < 3000) {
-      this.color = 'green';
+      this.color = "green";
     } else if (val < 5000) {
-      this.color = 'yellow';
+      this.color = "yellow";
     } else {
       this.color = "red";
     }
-    return this.color
+    return this.color;
   }
 }
