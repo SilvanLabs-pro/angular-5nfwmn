@@ -6,7 +6,9 @@
 
 <!-- <input type='text' #refVal [(ngModel)]="myVal" [style.color]="getColor(refVal.value)" > -->
 
-<input ref-mydata type="text" [(ngModel)]="MyVal" style="{{getStyle(mydata.value)}}"  />
+<!-- <input ref-mydata type="text" [(ngModel)]="MyVal" style="{{getStyle(mydata.value)}}"  /> -->
+
+<input ref-mydata [(ngModel)]="myVal" [ngStyle]="{'color' : applayStyle(mydata.value)}" />
 
 <!-- <input type='text' #refVal1 [(ngModel)]="myVal" [style.color]="refVal1.value < 5000? refVal1.value < 3000? 'green':' red': ' yellow'"> -->
 

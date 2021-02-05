@@ -25,6 +25,20 @@ export class AppComponent {
     return "color:" + color;
   }
 
+  applayStyle(val) {
+    console.log(val);
+     let color = val < 5000 ? (val < 3000 ? "green" : "yellow") : "red";
+    return  color;
+    // switch (val) {
+    //   case 1:
+    //     return "green";
+    //   case 12:
+    //     return "yellow";
+    //   case 123:
+    //     return "red";
+    // }
+  }
+
   getColor(val) {
     console.log(this.input.nativeElement.value);
     if (val < 3000) {
